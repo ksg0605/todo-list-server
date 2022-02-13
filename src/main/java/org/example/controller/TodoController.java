@@ -47,7 +47,7 @@ public class TodoController {
     @GetMapping
     public ResponseEntity<List<TodoResponse>> readAll() {
         System.out.println("READ ALL");
-        List<TodoEntity> list = this.service.searchALl();
+        List<TodoEntity> list = this.service.searchAll();
         List<TodoResponse> response = list.stream().map(TodoResponse::new)
                                                     .collect(Collectors.toList());
         return ResponseEntity.ok(response);
