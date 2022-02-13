@@ -29,7 +29,7 @@ public class TodoService {
                 .orElseThrow(() -> new ResponseStatusException((HttpStatus.NOT_FOUND)));
     }
 
-    public List<TodoEntity> searchALl() {
+    public List<TodoEntity> searchAll() {
         return this.todoRepository.findAll();
     }
 
